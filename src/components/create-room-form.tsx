@@ -29,7 +29,7 @@ const createRoomSchema = z.object({
 type CreateRoomFormData = z.infer<typeof createRoomSchema>;
 
 export function CreateRoomForm() {
-  const { mutateAsync: createRoom } = useCreateRoom(); //mutateAsync é a função que vai chamar a minha mutationFunction que é a função que realiza a chamada http
+  const { mutateAsync: createRoom } = useCreateRoom();
 
   const createRoomForm = useForm<CreateRoomFormData>({
     resolver: zodResolver(createRoomSchema),
